@@ -42,7 +42,7 @@ class CNN(nn.Module):
 def load_model():
     model = CNN() # Instantiate your model class
     # Load the saved weights
-    model.load_state_dict(torch.load('mnist_model.pth', map_location=torch.device('cpu')))
+    model = torch.load('mnist_model.pth', map_location=torch.device('cpu'))
     model.eval() # Set model to evaluation mode
     return model
 
